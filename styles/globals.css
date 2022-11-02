@@ -19,3 +19,32 @@ a {
   box-sizing: border-box;
 }
 
+.slick-prev {
+
+  position: absolute !important;
+  left: 20px !important;
+  z-index: 10;
+}
+
+.slick-next {
+  position: absolute !important;
+  right: 20px !important;
+  z-index: 10;
+}
+
+.carosol-text {
+  background-color: rgba(63, 63, 63, 0.3);
+
+}
+
+.programs-card:hover .programs-icon {
+  color: #60004B;
+}
+
+.our-team-card {
+  /* background: rgb(52, 72, 91); */
+  background: linear-gradient(0deg, rgb(5, 58, 107) 0%, rgba(0, 0, 0, 0) 40%);
+}
+.our-team-card:hover{
+  background: rgba(9, 48, 84, 0.789);
+}

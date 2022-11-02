@@ -1,17 +1,30 @@
-import Layout from '../src/views/Layout'
+import Layout from '../src/components/Layout/Layout'
+import HomePage from '../src/views/HomePage'
 
 
-export default function Home() {
+export async function getStaticProps() {
+
+  const bannerres = await fetch('http://localhost:5000/banner')
+  const banner = await bannerres.json()
+  const postsres = await fetch('http://localhost:5000/blog')
+  const posts = await postsres.json()
+  return {
+    props: {
+      posts,
+      banner,
+    },
+    revalidate: 60, // In seconds
+  }
+}
+
+
+export default function Home({ posts,banner }) {
+  const bannerURL = banner[0]?.banner?.banner;
   return (
     <div>
-
       <Layout>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+        <HomePage bannerURL={bannerURL} posts={posts} />
       </Layout>
-
-
     </div>
   )
 }
