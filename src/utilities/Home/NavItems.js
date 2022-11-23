@@ -4,37 +4,42 @@ export const Navitems = [
     {
         icon: <AiOutlineHome />,
         url: "/",
-        text: "mbbs"
+        text: "Home"
     },
     {
         icon: <AiOutlineHome />,
-        url: "/product",
-        text: "mba"
+        url: "/study-settle-japan",
+        text: "Study-settle-japan"
     },
     {
         icon: <AiOutlineHome />,
-        url: "/order",
-        text: "study-settle-japan"
+        url: "/about-us",
+        text: "About us"
     },
     {
         icon: <AiOutlineHome />,
-        url: "/stack",
-        text: "pg courses"
+        url: "/blog",
+        text: "Blog"
     },
    
+    // {
+    //     icon: <AiOutlineHome />,
+    //     url: "/recruitment",
+    //     text: "Recruitment"
+    // },
     {
         icon: <AiOutlineHome />,
-        url: "/warehouse",
-        text: "ug courses"
+        url: "/testimonials",
+        text: "Testimonials"
     },
     {
         icon: <AiOutlineHome />,
-        url: "/warehouse",
-        text: "testimonials"
+        url: "/contact",
+        text: "Contact us"
     },
     {
         icon: <AiOutlineHome />,
-        url: "/warehouse",
-        text: "contact"
+        url: "/register",
+        text: "Register"
     },
 ]

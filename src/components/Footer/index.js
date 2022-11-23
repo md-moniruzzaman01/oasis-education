@@ -8,7 +8,7 @@ const FooterPage = () => {
         <div>
             <footer className="footer p-10 bg-primary text-base-100">
                 <div>
-                    <Image src={logo} height="100" alt="logo" />
+                    <Image src={logo} height={60} alt="logo" />
                     <p className='text-md'>Oasis Globle Education<br />Globle Education since 1992</p>
                 </div>
                 <div>

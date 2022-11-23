@@ -1,17 +1,28 @@
 import React from 'react';
 import BlogCard from './BlogCard';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 const BlogSeactionOfHomePage = ({posts}) => {
     return (
-        <>
-        <h1 className='text-center text-4xl font-semibold border-b container pb-4 mx-auto'>Our Latest News </h1>
-        <div className='bg-gray-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 max-w-7xl   py-11 container mx-auto flex-wrap px-4'>
-            {posts.map((bd, i)=> <BlogCard key= {i} blogdata={bd}></BlogCard>)}
-          
-        
-        </div>
+        <div className='max-w-6xl mx-auto my-11'>
+           <h1 className='text-center text-4xl font-semibold border-b container mb-4 pb-4 mx-auto'>Our Latest News </h1>
+              <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+       
+         {posts.map((bd, i)=>  <SwiperSlide key= {i}><BlogCard  blogdata={bd}></BlogCard></SwiperSlide>)}
+      </Swiper>
+
      
-    </>
+    </div>
     );
 };
 

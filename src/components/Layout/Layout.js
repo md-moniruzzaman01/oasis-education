@@ -3,6 +3,8 @@ import Head from 'next/head'
 import NavBarTop from '../Navbar/index';
 import NavbarMain from '../Navbar/NavbarMain';
 import FooterPage from '../Footer';
+import SubcribeSection from '../HomePage/Subscribe section.js';
+import Modal from '../Modal'
 const Layout = ({ children }) => {
 
     return (
@@ -22,9 +24,9 @@ const Layout = ({ children }) => {
               <main>
                 {children}
               </main>
-
-                
+            <SubcribeSection/>
                     <FooterPage/>
+                    <Modal/>
             </div>
         </>
     );

@@ -48,3 +48,9 @@ a {
 .our-team-card:hover{
   background: rgba(9, 48, 84, 0.789);
 }
+.custom-bg{
+  background: rgba(0, 0, 0, 0.3);
+}
+/* .swiper-slide { 
+  width: 270px !important
+} */

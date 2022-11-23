@@ -5,8 +5,7 @@ const BlogCard = ({ blogdata }) => {
     const { title, _id } = blogdata;
     return (
 
-        <div className=' bg-primary card  rounded-none max-w-[350px] mx-0'>
-
+        <div className='bg-primary card  rounded-none max-w-[350px] mx-0'>
             <div className='mt-4'>
                 <figure >
                     <Image src={blogdata?.Image} width={380} height={250} className='w-10/12 mx-auto mt-9 h-64 blog-img' alt="blog picuture" /> </figure>
