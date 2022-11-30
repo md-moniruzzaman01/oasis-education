@@ -3,11 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import CarousolCard from './CarousolCard';
+import HomepageIcon from './HomePageIcon';
 
 const Carosol = ({bannerURL}) => {
 // const [Carousolitems, setCarousolitems]=useState([])
 //   useEffect(() => {
-//     fetch('http://localhost:5000/banner').then(data => data.json()).then(data => setCarousolitems(data[0]?.banner?.banner));
+//     fetch('https://oasis-backend.onrender.com/banner').then(data => data.json()).then(data => setCarousolitems(data[0]?.banner?.banner));
 // }, [])
     const settings = {
         dots: true,
@@ -20,7 +21,7 @@ const Carosol = ({bannerURL}) => {
         autoplaySpeed: 2000
       };
     return (
-        <div>
+        <div className='relative'>
         
         <Slider {...settings}>
             {
@@ -30,6 +31,7 @@ const Carosol = ({bannerURL}) => {
          
          
         </Slider>
+        <HomepageIcon/>
       </div>
     );
 };

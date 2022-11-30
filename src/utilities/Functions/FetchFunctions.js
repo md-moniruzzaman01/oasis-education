@@ -10,7 +10,7 @@ export const GetFetch= async (url)=>{
 
 // export async function getStaticProps() {
 
-//     const postsres = await fetch('http://localhost:5000/blog')
+//     const postsres = await fetch('https://oasis-backend.onrender.com/blog')
 //     const posts = await postsres.json();
 //     return {
 //       props: {

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SubcribeSection = () => {
     return (
         <div className='bg-secondary  w-full text-base-100 flex items-center'>

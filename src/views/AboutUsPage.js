@@ -5,6 +5,7 @@ import HeaderOfPage from '../components/shared/HeaderOfPage';
 import imgslide from '../image/slide2.2.jpg';
 import CoreValue from '../utilities/About us/CoreValue';
 import OurTeam from '../components/HomePage/OUR TEAMS';
+import BlogSeactionOfHomePage from '../components/HomePage/Blog';
 const AboutUsPage = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const AboutUsPage = () => {
             <PartnerSlide/>
             <OurTeam/>
             <CoreValue/>
+            <BlogSeactionOfHomePage/>
         </div>
     );
 };

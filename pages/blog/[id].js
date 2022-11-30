@@ -1,29 +1,37 @@
 import React from 'react';
+import SingleBlogDetailsPage from '../../src/components/Blog Details';
 import Layout from '../../src/components/Layout/Layout';
 
-// const data = fetch('http://localhost:5000/blog').then(res=>res.json()).then(data=> data);
-// export const getStaticPaths = async () => {
-// console.log(data);
-//     return {
-//         paths: [], //indicates that no page needs be created at build time
-//         fallback: 'blocking' //indicates the type of fallback
-//     }
-// }
-
-export const getStaticProps = async ({ params }) => {
-    const res = await fetch(`http://localhost:5000/blog/${params.id}`);
-    const post = await res.json();
-    return {
-      props: { ...post },
-    };
+export const getStaticProps = async (context) => {
+  const id = context.params.id
+  const res = await fetch(`https://oasis-backend.onrender.com/blog/${id}`);
+  const data = await res.json();
+  return {
+    props: {post:data},
   };
+};
 
+export async function getStaticPaths() {
+  const res = await fetch(`https://oasis-backend.onrender.com/blog`);
+  const post = await res.json();
+  const paths = post.map(data=>{
+    return {
+      
+      params:{id:data._id.toString()}
+    }
+  })
+  return {
+    paths,
+    fallback: false,
+  };
+}
 const SingleBlogPage = ({post}) => {
-console.log(post);
+  // const router = useRouter();
+  // if (router.isFallback)  return <div>Loading...</div>;
     return (
         <div>
              <Layout>
-            df
+           <SingleBlogDetailsPage post={post}/>
             </Layout>
         </div>
     );
@@ -35,36 +43,7 @@ console.log(post);
 
 
 
-
-export async function getStaticPaths() {
-   
-    const res = await fetch('http://localhost:5000/blog')
-    const post = await res.json()
-console.log(post);
-    const pathsWithParams = post.map((star) => ({ params: { id: star._id}}))
- 
-    return {
-        paths: pathsWithParams,
-        fallback: true
-    }
-  }
   
-  
-//   export async function getStaticProps({ params }) {
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
-//     const post = await res.json()
-  
-//     return { props: { post } }
-//   }
-
-
-
-
-
-
-
-
-
 
 
 

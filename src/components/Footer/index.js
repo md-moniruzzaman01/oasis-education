@@ -6,7 +6,7 @@ const FooterPage = () => {
     const years = date.getFullYear();
     return (
         <div>
-            <footer className="footer p-10 bg-primary text-base-100">
+            <footer className="footer p-10 bg-[#222222] text-base-100">
                 <div>
                     <Image src={logo} height={60} alt="logo" />
                     <p className='text-md'>Oasis Globle Education<br />Globle Education since 1992</p>
@@ -36,15 +36,15 @@ const FooterPage = () => {
                     <h1 className=" flex items-center text-md  font-semibold mt-1 "><span className=' font-bold mr-2 text-md'> </span>+61 422 528 597</h1>
                     <div>
 
-                        <p className='flex items-center text-md font-semibold  mt-1'><span className='mr-2 text-xl'></span>info@swifteducation.com.au</p>
+                        <p className='flex items-center text-md font-semibold  mt-1'><span className='mr-2 text-xl'></span>Dev.moniruzzaman@gmail.com</p>
                         <p className='text-md font-semibold  flex mt-2'> <span className='mr-2 text-xl'></span>Suite 11, 41 Rickard Road, Bankstown, NSW-2200</p>
 
                     </div>
                 </div>
             </footer>
-            <div className="footer footer-center p-4 bg-neutral text-base-100">
+            <div className="footer footer-center p-4 bg-[#222222] border-t border-gray-800 text-base-100">
                 <div>
-                    <p>Copyright © {years} - All right reserved by Oasis Global Education<span> | <a href="https://dev-moniruzzaman.web.app/" target="_blank" rel="noreferrer">Designed By Mmr Creation Ltd.</a></span></p>
+                    <p>Copyright © {years} - All right reserved by MMR Creation Ltd.<span> | <a href="https://dev-moniruzzaman.web.app/" target="_blank" rel="noreferrer">Designed By Mmr Creation Ltd.</a></span></p>
                     
                 </div>
             </div>

@@ -51,6 +51,21 @@ a {
 .custom-bg{
   background: rgba(0, 0, 0, 0.3);
 }
-/* .swiper-slide { 
-  width: 270px !important
-} */
+.custom-background{
+  background: rgb(0, 0, 0,0.4); 
+}
+.comment-bg{
+  background-image: url('../src/image/osis1.jpg');
+  background-attachment: fixed;
+  /* background-position: center;  */
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+.category{
+  position: sticky;
+  top: 75px;
+  padding: 30px 20px;
+}
+.socil-icon-transform:hover{
+  transform: translate(-.3rem, -.3ex);
+}

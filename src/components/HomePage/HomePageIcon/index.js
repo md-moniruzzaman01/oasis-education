@@ -4,9 +4,9 @@ import IconCard from './IconCard';
 const HomepageIcon = () => {
 
     return (
-        <div className='bg-primary h-44 w-full'>
+        <div className='w-full md:absolute md:bottom-[-100px]'>
            
-            <div className='max-w-7xl text-white grid grid-cols-3 gap-5 mx-auto'>
+            <div className='max-w-7xl bg-base-100 grid grid-cols-1 md:grid-cols-3 mx-auto'>
                {
                 Icons.map((icon,i)=> <IconCard key={i} icon={icon}></IconCard>)
                }
