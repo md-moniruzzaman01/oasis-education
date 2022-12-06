@@ -4,7 +4,7 @@ import HomePage from '../src/views/HomePage'
 
 
 export async function getStaticProps() {
-  const bannerres = await fetch('https://oasis-backend.onrender.com/banner')
+  const bannerres = await fetch('http://localhost:5000/banner')
   const banner = await bannerres.json()
   return {
     props: {
