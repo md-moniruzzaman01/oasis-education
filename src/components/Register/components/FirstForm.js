@@ -2,39 +2,22 @@ import React, { useContext } from 'react';
 import { multiFromContainer } from '..';
 
 const FirstForm = () => {
-    const { setContainer} = useContext(multiFromContainer)
+    const { setContainer,userData,setUserData} = useContext(multiFromContainer);
+    const disablebtn = userData["field"]  && userData["field"] 
     return (
         <div>
-                  <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-semibold">Name</span>
-                </label>
-                <input type="text" name='user_Name' placeholder="Type your name" className="input input-bordered" />
-            </div>
-
-
             <div className="form-control">
                 <label className="label">
-                    <span className="label-text font-semibold">Your Email *</span>
+                    <span className="label-text font-semibold">Please Select Your Feild</span>
                 </label>
-
-                <input type="email" name='user_email' placeholder="Type You email address"  className="input input-bordered" required />
+                <input type="text"  name="user_field" value={userData["field"]} onChange={(e) => setUserData({ ...userData, "field": e.target.value })} placeholder="Type your feild" className="input input-bordered" />
             </div>
-
             <div className="form-control">
-                <label className="label">
-                    <span className="label-text font-semibold">Your Phone *</span>
-                </label>
-
-                <input type="number" name='user_phone' placeholder="Type You phone number"  className="input input-bordered" required />
-            </div>
-            <div className="form-control  ">
-                <div className="form-control">
                     <label className="label">
                         <span className="label-text">Please Select Your Program</span>
                     </label>
 
-                    <select id="state" name="state" className="input input-bordered" required>
+                    <select  name="user_Program" value={userData["program"]} onChange={(e)=> setUserData({...userData, "program":e.target.value })} className="input input-bordered" required>
                         <option value="">Choose Program</option>
                         <option value="NSW" >NSW</option >
                         <option value="ACT">ACT</option>
@@ -47,9 +30,10 @@ const FirstForm = () => {
                     </select>
                 </div>
 
-            </div>
+            <div className="form-control flex-row justify-end mt-6">
+                {<button onClick={() => setContainer(2)}  disabled={disablebtn? false:true} className="btn btn-secondary text-base-100">Next</button>}
 
-            <button onClick={() => setContainer(2)} className="btn btn-secondary text-base-100">Back</button>
+            </div>
         </div>
     );
 };
