@@ -38,7 +38,7 @@ const MassageForm = () => {
                 </div>
                 <div className="form-control mt-6">
 
-                    <input className="btn btn-secondary text-white" type="submit" value="Send" />
+                    <input className="btn btn-primary text-white" type="submit" value="Send" />
                 </div>
             </div>
         </div>

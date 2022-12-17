@@ -4,7 +4,7 @@ import HomePage from '../src/views/HomePage'
 
 
 export async function getStaticProps() {
-  const bannerres = await fetch('http://localhost:5000/banner')
+  const bannerres = await fetch('http://localhost:5000/api/v1/banner')
   const banner = await bannerres.json()
   return {
     props: {
@@ -14,8 +14,8 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({banner }) {
-  const bannerURL = banner[0]?.banner?.banner;
+export default function Home({banner}) {
+  const bannerURL = banner.data[0].banner.banner;
   return (
     <div>
       <Layout>

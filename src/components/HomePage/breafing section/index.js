@@ -3,17 +3,17 @@ import React from 'react';
 import heroImg from '../../../image/education_bg-1024x692.jpg'
 const BrifingSection = () => {
     return (
-        <div className='max-w-6xl  mx-auto my-16'>
+        <div className='max-w-7xl  mx-auto my-16'>
             <div className='static md:flex'>
-                <div className='w-full'>
+                <div className='w-full md:w-5/12'>
                     <div>
                         <Image width={600} height={500} src={heroImg} alt="man with a  laptop" />
                     </div>
                 </div>
-                <div className='md:ml-11 px-4 md:px-0 w-full my-11 flex flex-col justify-between'>
+                <div className='md:ml-11 px-4 md:px-0 w-full md:w-6/12 my-11 flex flex-col justify-between'>
                     <div>
-                        <h2 className='text-2xl md:text-3xl font-bold'>WELCOME TO OASIS EDUCATION</h2>
-                        <p className='text-xl my-2'>
+                        <h2 className='text-2xl md:text-4xl font-bold'>WELCOME TO OASIS EDUCATION</h2>
+                        <p className='text-xl md:text-2xl my-2'>
                             We Are Eager To Give You Best Education And Style.
                         </p>
                         <p className='my-4'>
