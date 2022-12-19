@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import TestimonialCard from './TestimonialCard';
 
 const TestimonialSection = () => {
-    // http://localhost:5000/api/v1/testimonial
+    // https://oasis-backend.onrender.com/api/v1/testimonial
     const [data, setData]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/api/v1/testimonial').then(res=>res.json()).then(data=>setData(data.data[0].testimonial.testimonial))
+        fetch('https://oasis-backend.onrender.com/api/v1/testimonial').then(res=>res.json()).then(data=>setData(data.data[0].testimonial.testimonial))
     },[])
     return (
         <div>

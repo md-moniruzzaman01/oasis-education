@@ -3,7 +3,7 @@ const SubcribeSection = () => {
     const subscribeEmailHandle=(e)=>{
         e.preventDefault();
        const email = e.target.Email.value;
-       fetch('http://localhost:5000/subcribe',{
+       fetch('https://oasis-backend.onrender.com/subcribe',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'

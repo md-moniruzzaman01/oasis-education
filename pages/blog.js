@@ -4,7 +4,7 @@ import BlogePage from '../src/views/BlogePage';
 
 export async function getStaticProps() {
 
-    const postsres = await fetch('https://oasis-backend.onrender.com/blog')
+    const postsres = await fetch('https://oasis-backend.onrender.com/api/v1/blogs')
     const posts = await postsres.json();
     return {
       props: {

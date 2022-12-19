@@ -4,17 +4,17 @@ import Layout from '../../src/components/Layout/Layout';
 
 export const getStaticProps = async (context) => {
   const id = context.params.id
-  const res = await fetch(`https://oasis-backend.onrender.com/blog/${id}`);
+  const res = await fetch(`https://oasis-backend.onrender.com/api/v1/blogs/${id}`);
   const data = await res.json();
   return {
-    props: {post:data},
+    props: {post:data.data},
   };
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://oasis-backend.onrender.com/blog`);
+  const res = await fetch(`https://oasis-backend.onrender.com/api/v1/blogs`);
   const post = await res.json();
-  const paths = post.map(data=>{
+  const paths = post.data.map(data=>{
     return {
       
       params:{id:data._id.toString()}

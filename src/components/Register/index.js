@@ -16,7 +16,7 @@ const RegisterPage = () => {
     const phone = e.target.user_phone.value;
     const address = e.target.user_Address.value;
     const data = {field,program,name,email,phone,address};
-    fetch('http://localhost:5000/api/v1/register',{
+    fetch('https://oasis-backend.onrender.com/api/v1/register',{
      method: 'POST',
      headers: {
         'Content-Type': 'application/json',

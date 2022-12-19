@@ -8,7 +8,6 @@ const BlogSectionCard = ({ blogdata }) => {
     if (imageData === "http") {
         setImgUrl = BlogImg
     }
-    console.log(imageData);
     return (
         <div className='bg-primary card min-h-[420px]  rounded-none mx-0'>
             <div className='mt-4 '>
