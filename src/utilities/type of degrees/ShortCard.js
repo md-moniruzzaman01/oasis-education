@@ -1,4 +1,3 @@
-
 export const cardContaint = [
     {
         IconTitle: "National Universities (Established By The Japanese Government)"
