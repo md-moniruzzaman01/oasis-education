@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import journyImg from '../../image/january_banner.jpg'
 
@@ -34,7 +35,8 @@ const ModalForHome = () => {
          </div>
          <div className='flex justify-end'>
 
-         <button className='btn btn-ghost'>read more</button>
+         
+         <Link href='/contact'><button className='btn btn-ghost'>read more</button></Link>
          </div>
           </label>
         </label>

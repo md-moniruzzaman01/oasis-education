@@ -10,7 +10,7 @@ const ModalOfstudyWork = ({modelContent}) => {
                     <p className="py-4">{modelContent?.bodyPart01}</p>
                     <p className="py-4">{modelContent?.bodyPart02}</p>
                     <div className="modal-action">
-                        <label htmlFor="studyModal" className="btn">Yay!</label>
+                        <label htmlFor="studyModal" className="btn btn-ghost">close</label>
                     </div>
                 </div>
             </div>

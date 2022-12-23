@@ -12,8 +12,8 @@ const BlogSection = ({post}) => {
     return (
              
                    <div className='max-w-4xl mx-auto w-11/12 my-4'>
-                   <h1 className='text-2xl font-semibold'>{title}</h1>
-                   <div className='text-gray-500 px-1 pb-3 flex items-center '>
+                   <h1 className='text-3xl font-semibold '>{title}</h1>
+                   <div className='text-gray-500 px-1 py-3 flex items-center '>
                        <p className='mr-1 text-xl'><BiUserCircle/></p>
                        <p> Posted by admin . 24 Nov 2022</p>
                    </div>

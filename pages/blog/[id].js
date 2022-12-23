@@ -12,7 +12,7 @@ export const getStaticProps = async (context) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`https://oasis-backend.onrender.com/api/v1/blogs`);
+  const res = await fetch(`https://oasis-backend.onrender.com/api/v1/blogs/all?limit=5`);
   const post = await res.json();
   const paths = post.data.map(data=>{
     return {

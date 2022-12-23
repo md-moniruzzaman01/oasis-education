@@ -5,7 +5,7 @@ import BlogPageAside from './Components/Aside';
 const BlogContainer = () => {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch('https://oasis-backend.onrender.com/api/v1/blogs', {})
+        fetch('https://oasis-backend.onrender.com/api/v1/blogs?limit=5', {})
             .then((res) => res.json())
             .then(data => {
                 setData(data.data)
