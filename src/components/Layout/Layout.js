@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState} from 'react';
 import Head from 'next/head'
 import FooterPage from '../Footer';
 import SubcribeSection from '../HomePage/Subscribe section.js';
@@ -8,9 +8,10 @@ import Link from 'next/link';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdSearch } from 'react-icons/md';
 import Image from 'next/image';
-// import Logo from '/Oasis-Global-Education.png'
+import AppContext from '../../utilities/Functions/AppContext';
 const Layout = ({ children }) => {
     const [search, setSearch] = useState(false)
+    const {setSearchValue,setIsSearch } = useContext(AppContext);
     const Navitem = Navitems.map((item, index) => <li key={index} className="mx-4  font-semibold w-auto py-1 uppercase flex items-center md:justify-center md:w-auto  md:mx-1"> <Link href={item.url} ><a >{item.text} </a></Link></li>)
 
     return (
@@ -40,12 +41,13 @@ const Layout = ({ children }) => {
                                     {
                                         search ?
                                             <div className=' flex justify-between w-full lg:w-8/12 h-11 bg-white'>
-                                                <input className='bg-gray-100 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search" id="" placeholder='Search here....' />
-                                                <button className='flex  justify-center items-center px-3 bg-slate-200 rounded-r-md text-xl'><MdSearch /></button>
+                                                <input className='bg-gray-100 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search"  placeholder='Search here....' 
+                                                 onChange={(e) => setSearchValue(e.target.value)}/>
+                                                <button className='flex  justify-center items-center px-3 bg-slate-200 rounded-r-md text-xl' onClick={()=>setIsSearch(true)}><MdSearch /></button>
                                             </div>
                                             : <div className='w-full block md:flex justify-around '>
                                                 <div className='flex md:hidden justify-between w-[92%] mx-4  mb-4 h-11 '>
-                                                    <input className='bg-gray-200 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search" id="" placeholder='Search here....' />
+                                                    <input className='bg-gray-100 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search" id="" placeholder='Search here....' />
                                                     <button className='flex  justify-center items-center px-3 bg-slate-200 rounded-r-md text-xl'><MdSearch /></button>
                                                 </div>
                                                 {
@@ -73,8 +75,9 @@ const Layout = ({ children }) => {
                         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
                         <ul className="menu p-4 w-80 bg-base-100 items-start">
                             <div className='mb-4  bg-white flex justify-between w-full h-11 md:w-full lg:w-8/12 du'>
-                                <input className='bg-gray-100 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search" id="" placeholder='Search here....' />
-                                <button className='flex  justify-center items-center px-3 bg-slate-200 rounded-r-md text-xl'><MdSearch /></button>
+                                <input className='bg-gray-100 px-7 rounded-l-md w-11/12 focus:outline-none' type="search" name="search" id="" placeholder='Search here....' 
+                                 onChange={(e) => setSearchValue(e.target.value)}/>
+                                <button className='flex  justify-center items-center px-3 bg-slate-200 rounded-r-md text-xl' onClick={()=>setIsSearch(true)}><MdSearch /></button>
                             </div>
                             {Navitem}
 

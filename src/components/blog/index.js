@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import BlogCard from '../HomePage/Blog/BlogCard';
 import BlogPageAside from './Components/Aside';
+const BlogContainer = ({data}) => {
 
-const BlogContainer = () => {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        fetch('https://oasis-backend.onrender.com/api/v1/blogs?limit=5', {})
-            .then((res) => res.json())
-            .then(data => {
-                setData(data.data)
-            })
-    }, [])
     return (
         <div className='min-h-screen max-w-screen-2xl mx-auto'>
            <div className='grid grid-cols-[70%_30%]'>

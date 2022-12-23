@@ -3,7 +3,6 @@ import SocialIcons from './SocialIcons';
 const NavTopStyle ='px-3 border-r h-4 flex justify-center items-center hover:text-blue-400 duration-300';
 const NavBarTop = () => {
 
-
     return (
         <div className='bg-primary md:py-2 w-full '>
             

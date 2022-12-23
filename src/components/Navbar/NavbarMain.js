@@ -7,13 +7,31 @@ import Link from 'next/link';
 import { Navitems } from '../../utilities/Home/NavItems';
 import Logo from "../../../public/Oasis-Global-Education.png"
 const NavbarMain = () => {
+/////////////////////////////////////////////////////////////////////
+
+// ///////////////////////////////////////Unused navigatio/nbar///////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const [open, setOpen] = useState(false)
     const [search, setSearch] = useState(false)
     const navBarBtnHandle = () => setOpen(!open)
     const Navitem = Navitems.map((item, index) => <li key={index} className="mx-4  font-semibold w-auto py-1 uppercase flex items-center md:justify-center md:w-auto  md:mx-1"> <Link href={item.url} ><a >{item.text} </a></Link></li>)
 
     const [active, setactive] = useState(false)
-
 
     if (typeof window !== "undefined") {
         window.onscroll = () => {
