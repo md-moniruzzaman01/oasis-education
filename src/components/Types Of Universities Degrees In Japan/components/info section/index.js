@@ -1,9 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
 import fatimaUniversityPhoto from '../../../../image/cetegory page image/Fatima-University-medical-Center.jpg'
-import { cardContaint } from '../../../../utilities/type of degrees/shortCard';
 import Card from './Card';
 const InfoPart = () => {
+    const cardContaint = [
+        {
+            IconTitle: "National Universities (Established By The Japanese Government)"
+        },
+        {
+            IconTitle: "Public Universities (Established By Local Public Entities)"
+        },
+        {
+            IconTitle: "Private Universities (Established By Educational Corporations)"
+        }
+       
+    ]
     return (
         <div className='min-h-[80vh] bg-primary text-base-100 py-20'>
             <h1 className='text-center text-4xl font-bold'>Types Of Universities & Degrees In Japan : </h1>
