@@ -10,13 +10,11 @@ export const getStaticProps = async (context) => {
     props: {post:data.data},
   };
 };
-
 export async function getStaticPaths() {
-  const res = await fetch(`https://oasis-backend.onrender.com/api/v1/blogs/all?limit=5`);
+  const res = await fetch('https://oasis-backend.onrender.com/api/v1/blogs/ids');
   const post = await res.json();
   const paths = post.data.map(data=>{
     return {
-      
       params:{id:data._id.toString()}
     }
   })
@@ -26,8 +24,6 @@ export async function getStaticPaths() {
   };
 }
 const SingleBlogPage = ({post}) => {
-  // const router = useRouter();
-  // if (router.isFallback)  return <div>Loading...</div>;
     return (
         <div>
              <Layout>

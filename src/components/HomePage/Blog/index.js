@@ -7,7 +7,7 @@ import BlogSectionCard from './BlogSectionCard';
 const BlogSeactionOfHomePage = () => {
   const [BlogData,setBlogData]=useState([])
   useEffect(()=>{
-    fetch('https://oasis-backend.onrender.com/api/v1/blogs',{})
+    fetch('https://oasis-backend.onrender.com/api/v1/blogs/news?limit=10',{})
     .then(res=>res.json())
     .then(data=> {
       setBlogData(data.data);

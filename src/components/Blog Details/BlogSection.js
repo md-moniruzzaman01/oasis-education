@@ -1,9 +1,10 @@
 import React from 'react';
 import { BiUserCircle } from "react-icons/bi";
+import { AiFillEye } from "react-icons/ai";
 import Image from 'next/image';
 import RelatedPosts from './Related post';
 const BlogSection = ({post}) => {
-    const {title,BlogImg} = post
+    const {title,BlogImg,view} = post
     const imageData = BlogImg.slice(0,4)
     let setImgUrl = '';
     if (imageData === "http") {
@@ -16,6 +17,8 @@ const BlogSection = ({post}) => {
                    <div className='text-gray-500 px-1 py-3 flex items-center '>
                        <p className='mr-1 text-xl'><BiUserCircle/></p>
                        <p> Posted by admin . 24 Nov 2022</p>
+                       <p className='ml-2  text-xl'> <AiFillEye/></p>
+                       <p className='ml-1'>{view}</p>
                    </div>
                   
                        <Image

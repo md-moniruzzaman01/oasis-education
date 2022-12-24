@@ -63,7 +63,7 @@ a {
 }
 .category{
   position: sticky;
-  top: 75px;
+  top: 20px;
   padding: 30px 20px;
 }
 .socil-icon-transform:hover{

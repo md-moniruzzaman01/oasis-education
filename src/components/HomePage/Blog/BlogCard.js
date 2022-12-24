@@ -22,7 +22,7 @@ const BlogCard = ({ blogdata }) => {
                     <p className='mt-1.5'>{data} <span>by Admin</span></p>
                 </div>
             </div>
-            <article className='text-xl mt-5' dangerouslySetInnerHTML={{ __html: blogdata?.content.slice(0, 200) }} />
+            <article className='text-xl mt-5' dangerouslySetInnerHTML={{ __html: blogdata?.content?.slice(0, 200) }} />
 
             <div className='flex mt-4 items-center justify-between'>
                 <div className='flex'>
