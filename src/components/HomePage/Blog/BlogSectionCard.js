@@ -9,7 +9,7 @@ const BlogSectionCard = ({ blogdata }) => {
         setImgUrl = BlogImg
     }
     return (
-        <div className='bg-primary card min-h-[400px]  rounded-none mx-0'>
+        <div className='bg-primary card min-h-[400px]   rounded-none mx-0'>
             <div className='mt-4 '>
                 <figure >
                     <Image src={setImgUrl} width={380} height={250} className='w-10/12 mx-auto mt-9 h-64 blog-img' alt="blog picuture" /> </figure>

@@ -4,7 +4,7 @@ import storyImg from '../../../public/Oasis-our-story.png'
 const Info = () => {
     return (
        <div className='bg-primary'>
-         <div className='flex min-h-[80vh] text-base-100 justify-between items-center max-w-7xl mx-auto '>
+         <div className='static py-11 md:py-0 md:flex min-h-[80vh] text-base-100 justify-between items-center max-w-7xl mx-auto '>
             <div className='w-11/12 mx-auto my-7 md:w-5/12'>
                 <Image src={storyImg} height={600}  alt="talking to guys" />
             </div>

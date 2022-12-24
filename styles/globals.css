@@ -45,27 +45,38 @@ a {
   /* background: rgb(52, 72, 91); */
   background: linear-gradient(0deg, rgb(5, 58, 107) 0%, rgba(0, 0, 0, 0) 40%);
 }
-.our-team-card:hover{
+
+.our-team-card:hover {
   background: rgba(9, 48, 84, 0.789);
 }
-.custom-bg{
+
+.custom-bg {
   background: rgba(0, 0, 0, 0.3);
 }
-.custom-background{
-  background: rgb(0, 0, 0,0.4); 
+
+.custom-background {
+  background: rgb(0, 0, 0, 0.4);
 }
-.comment-bg{
+
+.comment-bg {
   background-image: url('../src/image/osis1.jpg');
   background-attachment: fixed;
   /* background-position: center;  */
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.category{
+
+.category {
   position: sticky;
   top: 20px;
   padding: 30px 20px;
 }
-.socil-icon-transform:hover{
+
+.socil-icon-transform:hover {
   transform: translate(-.3rem, -.3ex);
+}
+
+
+@media only screen and (max-width: 600px) {
+
 }

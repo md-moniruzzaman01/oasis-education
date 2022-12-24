@@ -16,7 +16,7 @@ const LatestBlog = () => {
                 <h1 className='text-2xl font-bold'>Popular blogs</h1>
                 <p className='ml-2 w-6/12 border-b-2 border-red-400'></p>
             </div>
-            <div className='p-4'>
+            <div className='p-0 md:p-4'>
                 {latestblog && latestblog.map(data => <Card key={data._id} data={data}/>)}
             </div>
         </div>

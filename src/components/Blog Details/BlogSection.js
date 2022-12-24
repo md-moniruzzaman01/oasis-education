@@ -10,6 +10,7 @@ const BlogSection = ({post}) => {
     if (imageData === "http") {
         setImgUrl = BlogImg
     }
+console.log(setImgUrl);
     return (
              
                    <div className='max-w-4xl mx-auto w-11/12 my-4'>

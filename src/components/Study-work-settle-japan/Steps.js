@@ -22,8 +22,8 @@ const Steps = () => {
     return (
         <div>
             {/* service card section */}
-            <section className='py-16 bg-slate-100 mx-auto'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:gap-5 md:px-20 pb-7 mx-auto max-w-7xl">
+            <section className='py-16 bg-slate-100 mx-auto px-4'>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 md:px-20 pb-7 mx-auto max-w-7xl">
                     <div><ModalOfstudyWork modelContent={studyAbroutProgram} />
                         <label htmlFor="studyModal">
                             <StepsCardForModal imageURL={Img01} title='How To Pick Your Study-Abroad Program?'/>

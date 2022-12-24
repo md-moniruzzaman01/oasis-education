@@ -4,7 +4,7 @@ import IconCard from './IconCard';
 const HomepageIcon = () => {
 
     return (
-        <div className='w-full md:absolute md:bottom-[-100px]'>
+        <div className='w-full pt-7 px-4 md:px-0 md:pt-0 md:absolute md:bottom-[-100px]'>
            
             <div className='max-w-7xl bg-base-100 grid grid-cols-1 md:grid-cols-3 mx-auto'>
                {
