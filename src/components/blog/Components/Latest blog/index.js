@@ -10,7 +10,6 @@ const LatestBlog = () => {
                 setLatestblog(data.data)
             })
     }, [])
-    console.log(latestblog);
     return (
         <div className='my-11'>
             <div className='flex items-center'>

@@ -11,7 +11,6 @@ const BlogSeactionOfHomePage = () => {
     .then(res=>res.json())
     .then(data=> {
       setBlogData(data.data);
-      console.log(data);
     })
   },[])
     return (
